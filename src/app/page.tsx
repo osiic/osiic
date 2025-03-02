@@ -21,6 +21,7 @@ export default function Home() {
             .
           </li>
           <li>Save and see your changes instantly.</li>
+          <li>Osi ic - M. Ridho Haris Muzaki</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
