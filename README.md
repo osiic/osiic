@@ -18,7 +18,5 @@
 ### 🏆 GitHub Stats
 
 <p align="center">
-    <a href="https://git.io/streak-stats">
-        [![GitHub Streak](https://streak-stats.demolab.com/?user=osiic)](https://git.io/streak-stats)
-    </a>
+    <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=osiic" alt="GitHub Streak" /></a>
 </p>
