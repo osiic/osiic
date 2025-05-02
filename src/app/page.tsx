@@ -1,13 +1,15 @@
 "use client";
-import Image from "next/image";
-import { DarkLightModeButton } from "@/components/atoms/DarkLightModeButton";
+
 import data from "@/data/data.json";
+
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/atoms/Accordion";
+import { DarkLightModeButton } from "@/components/molecules/DarkLightModeButton";
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
           width={180}
           height={38}
           priority
+          loading="eager"
         />
         <DarkLightModeButton />
       </header>
