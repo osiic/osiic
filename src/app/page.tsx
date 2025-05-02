@@ -1,8 +1,17 @@
+"use client";
 import Image from "next/image";
+import { DarkLightModeButton } from "@/components/atoms/DarkLightModeButton";
+import data from "@/data/data.json";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/atoms/Accordion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -12,17 +21,161 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-          <li>Osi ic - M. Ridho Haris Muzaki</li>
-        </ol>
+        <div className="max-w-md">
+          <h1 className="text-2xl sm:text-4xl font-bold">Profil Portofolio</h1>
+
+          <Accordion type="single" collapsible>
+            {/* Profile */}
+            <AccordionItem value="profile" className="min-w-md">
+              <AccordionTrigger>👤 Profil</AccordionTrigger>
+              <AccordionContent>
+                <p className="mb-2">{data.profile}</p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>
+                    <strong>Nama:</strong> {data.personal_info.name}
+                  </li>
+                  <li>
+                    <strong>Email:</strong> {data.personal_info.email}
+                  </li>
+                  <li>
+                    <strong>Telepon:</strong> {data.personal_info.phone}
+                  </li>
+                  <li>
+                    <strong>LinkedIn:</strong>{" "}
+                    <a
+                      href={data.personal_info.linkedin}
+                      className="text-blue-600 underline"
+                    >
+                      {data.personal_info.linkedin}
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Portfolio:</strong>{" "}
+                    <a
+                      href={data.personal_info.portfolio}
+                      className="text-blue-600 underline"
+                    >
+                      {data.personal_info.portfolio}
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Lokasi:</strong> {data.personal_info.location}
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Education */}
+            <AccordionItem value="education">
+              <AccordionTrigger>🎓 Pendidikan</AccordionTrigger>
+              <AccordionContent>
+                {data.education.map((edu, idx) => (
+                  <div key={idx} className="mb-4">
+                    <h4 className="font-semibold">
+                      {edu.institution} ({edu.year})
+                    </h4>
+                    <p className="italic text-sm">{edu.major}</p>
+                    <ul className="list-disc ml-5 text-sm">
+                      {edu.achievements?.map((a, i) => <li key={i}>{a}</li>)}
+                    </ul>
+                    <p className="mt-2 text-sm font-medium">Proyek:</p>
+                    <ul className="list-disc ml-5 text-sm">
+                      {edu.projects.map((proj, i) => (
+                        <li key={i}>{proj}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Internships */}
+            <AccordionItem value="internships">
+              <AccordionTrigger>🏢 Pengalaman Magang</AccordionTrigger>
+              <AccordionContent>
+                {data.internships.map((intern, idx) => (
+                  <div key={idx} className="mb-4">
+                    <h4 className="font-semibold">
+                      {intern.company} ({intern.year})
+                    </h4>
+                    <p className="italic text-sm">
+                      {intern.role} - {intern.type}
+                    </p>
+                    <ul className="list-disc ml-5 text-sm">
+                      {intern.responsibilities.map((r, i) => (
+                        <li key={i}>{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Organizations */}
+            <AccordionItem value="organizations">
+              <AccordionTrigger>🤝 Organisasi</AccordionTrigger>
+              <AccordionContent>
+                {data.organizations.map((org, idx) => (
+                  <div key={idx} className="mb-4">
+                    <h4 className="font-semibold">
+                      {org.organization} ({org.year})
+                    </h4>
+                    <p className="italic text-sm">{org.role}</p>
+                    <ul className="list-disc ml-5 text-sm">
+                      {org.activities.map((a, i) => (
+                        <li key={i}>{a}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Projects */}
+            <AccordionItem value="projects">
+              <AccordionTrigger>💻 Proyek</AccordionTrigger>
+              <AccordionContent>
+                {data.projects.map((proj, idx) => (
+                  <div key={idx} className="mb-4">
+                    <h4 className="font-semibold">{proj.title}</h4>
+                    <p className="text-sm mb-1">{proj.description}</p>
+                    <p className="text-xs text-gray-600">
+                      Tech: {proj.tech.join(", ")}
+                    </p>
+                    <a
+                      href={proj.link}
+                      className="text-blue-600 underline text-sm"
+                    >
+                      Lihat proyek
+                    </a>
+                  </div>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Articles */}
+            <AccordionItem value="articles">
+              <AccordionTrigger>✍️ Artikel</AccordionTrigger>
+              <AccordionContent>
+                {data.articles.map((art, idx) => (
+                  <div key={idx} className="mb-4">
+                    <h4 className="font-semibold">{art.title}</h4>
+                    <p className="text-xs text-gray-600 mb-1">
+                      Tanggal Terbit: {art.published}
+                    </p>
+                    <p className="text-sm">{art.summary}</p>
+                    <a
+                      href={art.link}
+                      className="text-blue-600 underline text-sm"
+                    >
+                      Baca artikel
+                    </a>
+                  </div>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -48,6 +201,7 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <DarkLightModeButton />
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
