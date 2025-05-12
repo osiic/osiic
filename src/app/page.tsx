@@ -11,27 +11,16 @@ import { DarkLightModeButton } from "@/components/molecules/DarkLightModeButton"
 
 interface PersonalInfo {
   name: string;
-  phone: string;
-  email: string;
-  linkedin: string;
-  portfolio: string;
-  location: string;
-}
-
-interface Education {
-  institution: string;
-  major: string;
-  year: string;
-  achievements?: string[];
-  projects: string[];
-}
-
-interface Internship {
-  company: string;
-  role: string;
-  type: string;
-  year: string;
-  responsibilities: string[];
+  social_media: {
+    platform: string;
+    username: string;
+    link: string;
+  }[];
+  games: {
+    platform: string;
+    username: string;
+    link?: string;
+  }[];
 }
 
 interface Organization {
@@ -64,8 +53,6 @@ interface Skills {
 interface PortfolioData {
   personal_info: PersonalInfo;
   profile: string;
-  education: Education[];
-  internships: Internship[];
   organizations: Organization[];
   skills: Skills;
   projects: Project[];
@@ -74,139 +61,137 @@ interface PortfolioData {
 
 const data: PortfolioData = {
   personal_info: {
-    name: "M. Ridho Haris Muzaki",
-    phone: "+62 851-1712-1912",
-    email: "ridhomuzaki.ic@gmail.com",
-    linkedin: "https://linkedin.com/in/muzakiic",
-    portfolio: "https://osiic.vercel.app",
-    location: "Banyuwangi, Jawa Timur, 68455",
+    name: "Osi ic",
+    social_media: [
+      {
+        platform: "Instagram",
+        username: "@nomiiistake",
+        link: "https://instagram.com/nomiiistake",
+      },
+      {
+        platform: "Instagram",
+        username: "@ngetikin",
+        link: "https://instagram.com/ngetikin",
+      },
+      {
+        platform: "Discord",
+        username: "@c.emy",
+        link: "https://discord.com/users/c.emy",
+      },
+      {
+        platform: "Twitter",
+        username: "@cemy_id",
+        link: "https://twitter.com/cemy_id",
+      },
+      {
+        platform: "TikTok",
+        username: "@ngetikin",
+        link: "https://tiktok.com/@ngetikin",
+      },
+      {
+        platform: "GitHub",
+        username: "@osiic",
+        link: "https://github.com/osiic",
+      },
+    ],
+    games: [
+      {
+        platform: "Valorant",
+        username: "noviice/novice",
+        link: "https://tracker.gg/valorant/profile/noviice",
+      },
+      {
+        platform: "Genshin Impact",
+        username: "osiic",
+        link: "https://genshin.hoyoverse.com/",
+      },
+      {
+        platform: "Mobile Legends",
+        username: "osiic",
+        link: "https://m.mobilelegends.com/",
+      },
+      {
+        platform: "Steam",
+        username: "osiic",
+        link: "https://steamcommunity.com/id/osiic",
+      },
+    ],
   },
   profile:
-    "Lulusan SMK Teknik Elektronika Industri dengan keahlian pengembangan website (Next.js, React, Laravel), IoT (Arduino, ESP8266), dan pemrograman mikrokontroler. Pengalaman magang di bidang keuangan (Abacus Cash Solution) dan teknisi alat medis (RSUD Genteng). Aktif berkontribusi dalam proyek digital berbasis web dan IoT dengan hasil terukur.",
-  education: [
-    {
-      institution: "SMK Muhammadiyah 2 Genteng",
-      major: "Teknik Elektronika Industri (TEI)",
-      year: "2022–2025",
-      achievements: ["Juara 2 Kelas (Semester 1–5)"],
-      projects: [
-        "Sistem IoT monitoring kandang ayam (Arduino, ESP8266, Firebase)",
-        "Pengembangan website komunitas (Next.js, React)",
-      ],
-    },
-    {
-      institution:
-        "Pondok Pesantren Integrated Science & Tahfidz Muhammadiyah (INSAT)",
-      major: "Ilmu Pengetahuan dan Tahfidz Al-Qur'an",
-      year: "2019–2022",
-      projects: [
-        "Dasar robotika dan pemrograman Arduino",
-        "Proyek sederhana berbasis mikrokontroler",
-      ],
-    },
-  ],
-  internships: [
-    {
-      company: "RSUD Genteng",
-      role: "Teknisi Alat Medis",
-      type: "Magang",
-      year: "2023",
-      responsibilities: [
-        "Pemeliharaan 20+ alat medis, tingkat ketersediaan alat 95%",
-      ],
-    },
-    {
-      company: "Abacus Cash Solution (Magang BCA Cash Management)",
-      role: "Teller",
-      type: "Magang",
-      year: "Des 2023–Jun 2024",
-      responsibilities: [
-        "Rekonsiliasi kaset ATM, meningkatkan efisiensi proses dengan sistem digital",
-        "Pelaporan harian dan koordinasi dengan supervisor",
-      ],
-    },
-  ],
+    "Seorang kreator yang tertarik pada pengembangan diri, edukasi, dan gaya hidup kreatif. Aktif mengeksplorasi coding, desain, dan pemikiran hukum serta bisnis. Lewat akun ini, aku membagikan proses belajar, karya, dan insight harian dengan harapan bisa tumbuh bareng komunitas yang punya visi serupa.",
   organizations: [
     {
-      role: "Sekretaris",
-      organization: "IPM (Ikatan Pelajar Muhammadiyah)",
-      year: "2019–2022",
+      role: "Content Creator",
+      organization: "Digital Community",
+      year: "2020–Sekarang",
       activities: [
-        "Mengelola dokumen organisasi dan administrasi kegiatan sekolah",
-        "Bertanggung jawab dalam perencanaan agenda rapat rutin",
+        "Creating tech-related content",
+        "Community engagement",
+        "Digital collaboration projects",
       ],
     },
     {
-      role: "Anggota Aktif",
-      organization: "Komunitas Digital",
-      year: "2022–Sekarang",
+      role: "Gaming Enthusiast",
+      organization: "Gaming Community",
+      year: "2018–Sekarang",
       activities: [
-        "Diskusi teknologi & desain grafis di Discord (Photoshop, Illustrator)",
-        "Kontribusi dalam forum pengembangan web dan pemrograman",
+        "Competitive gaming",
+        "Game development discussions",
+        "Esports events",
       ],
     },
   ],
   skills: {
     hard_skills: [
-      "Next.js",
-      "React",
-      "Laravel",
-      "Arduino",
-      "ESP8266",
-      "Python",
-      "C++",
-      "HTML/CSS",
-      "Tailwind CSS",
-      "Firebase",
-      "MySQL",
-      "SEO Optimization",
+      "Content Creation",
+      "Community Management",
+      "Digital Marketing",
+      "Basic Web Development",
+      "Game Modding",
     ],
     software_skills: [
-      "Figma",
-      "Adobe Photoshop",
-      "Microsoft Word",
-      "Excel",
-      "PowerPoint",
+      "Adobe Creative Suite",
+      "OBS Studio",
+      "Streamlabs",
+      "Video Editing Tools",
+      "Social Media Platforms",
     ],
     soft_skills: [
-      "Komunikasi",
-      "Manajemen Waktu",
-      "Kerja Tim",
+      "Creativity",
+      "Communication",
+      "Team Collaboration",
+      "Adaptability",
       "Problem Solving",
-      "Kepemimpinan",
-      "Public Speaking",
     ],
   },
   projects: [
     {
-      title: "Sistem Monitoring Suhu & Kelembaban Kandang Ayam",
-      tech: ["Arduino", "ESP8266", "Firebase"],
-      description:
-        "Proyek IoT untuk memantau suhu dan kelembaban kandang ayam secara real-time melalui dashboard berbasis web.",
-      link: "https://github.com/muzakite/kandang-iot",
+      title: "Community Website",
+      tech: ["HTML/CSS", "JavaScript"],
+      description: "A hub for digital creators to connect and collaborate.",
+      link: "https://github.com/osiic/community-hub",
     },
     {
-      title: "Website Komunitas Belajar",
-      tech: ["Next.js", "Tailwind CSS"],
-      description:
-        "Platform komunitas online untuk pelajar berbagi materi belajar, artikel, dan diskusi.",
-      link: "https://komunitas.vercel.app",
+      title: "Gaming Content Series",
+      tech: ["Video Production", "Streaming"],
+      description: "A popular gaming tutorial and gameplay series.",
+      link: "https://example.com/gaming-series",
     },
   ],
   articles: [
     {
-      title: "Mengenal IoT dan Penerapannya di Dunia Peternakan",
-      published: "2024-11-15",
+      title: "Building Online Communities",
+      published: "2023-05-20",
       summary:
-        "Artikel ini membahas bagaimana teknologi Internet of Things dapat membantu para peternak dalam memantau kondisi lingkungan secara otomatis.",
-      link: "https://medium.com/@muzakite/iot-peternakan",
+        "Tips and strategies for growing and engaging digital communities.",
+      link: "https://medium.com/osiic/community-building",
     },
     {
-      title: "Panduan Membuat Website dengan Next.js untuk Pemula",
-      published: "2024-09-30",
+      title: "Content Creation for Beginners",
+      published: "2023-02-15",
       summary:
-        "Langkah-langkah praktis membuat website menggunakan Next.js dan Tailwind CSS, cocok untuk pemula yang ingin mulai belajar full-stack web.",
-      link: "https://dev.to/muzakite/nextjs-pemula",
+        "Getting started with digital content creation across platforms.",
+      link: "https://dev.to/osiic/content-creation",
     },
   ],
 };
@@ -230,7 +215,7 @@ export default function Home() {
       <main className="w-full max-w-6xl flex-1 flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            Profil Portofolio
+            {data.personal_info.name}
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             {data.profile}
@@ -238,166 +223,91 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Personal Info Card */}
+          {/* Social Media Card */}
           <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
-            <h2 className="text-xl font-semibold mb-4">Informasi Pribadi</h2>
+            <h2 className="text-xl font-semibold mb-4">Social Media</h2>
             <ul className="space-y-3">
-              {[
-                { label: "Nama", value: data.personal_info.name },
-                {
-                  label: "Email",
-                  value: data.personal_info.email,
-                  link: `mailto:${data.personal_info.email}`,
-                },
-                {
-                  label: "Telepon",
-                  value: data.personal_info.phone,
-                  link: `tel:${data.personal_info.phone}`,
-                },
-                {
-                  label: "LinkedIn",
-                  value: data.personal_info.linkedin,
-                  link: data.personal_info.linkedin,
-                  external: true,
-                },
-                {
-                  label: "Portfolio",
-                  value: data.personal_info.portfolio,
-                  link: data.personal_info.portfolio,
-                  external: true,
-                },
-                { label: "Lokasi", value: data.personal_info.location },
-              ].map((item, index) => (
+              {data.personal_info.social_media.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4"
+                  className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4"
                 >
-                  <strong className="w-24 flex-shrink-0">{item.label}:</strong>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target={item.external ? "_blank" : undefined}
-                      rel={item.external ? "noopener noreferrer" : undefined}
-                      className="text-blue-600 dark:text-blue-400 hover:underline break-all"
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
-                    <span>{item.value}</span>
-                  )}
+                  <strong className="w-24 flex-shrink-0">
+                    {item.platform}:
+                  </strong>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    {item.username}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links Card */}
+          {/* Game Accounts Card */}
           <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
-            <h2 className="text-xl font-semibold mb-4">Tautan Cepat</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { icon: "🎓", label: "Pendidikan", href: "#education" },
-                { icon: "🏢", label: "Pengalaman", href: "#internships" },
-                { icon: "💻", label: "Proyek", href: "#projects" },
-                { icon: "✍️", label: "Artikel", href: "#articles" },
-              ].map((link, index) => (
-                <a
+            <h2 className="text-xl font-semibold mb-4">Game Accounts</h2>
+            <ul className="space-y-3">
+              {data.personal_info.games.map((item, index) => (
+                <li
                   key={index}
-                  href={link.href}
-                  className="rounded-lg border border-border p-4 flex items-center gap-3 hover:bg-accent transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4"
                 >
-                  <span className="text-2xl">{link.icon}</span>
-                  <span>{link.label}</span>
-                </a>
+                  <strong className="w-24 flex-shrink-0">
+                    {item.platform}:
+                  </strong>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      {item.username}
+                    </a>
+                  ) : (
+                    <span>{item.username}</span>
+                  )}
+                </li>
               ))}
-            </div>
+            </ul>
+          </div>
+        </div>
+
+        {/* Quick Links Card */}
+        <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+          <h2 className="text-xl font-semibold mb-4">Tautan Cepat</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { icon: "🤝", label: "Organisasi", href: "#organizations" },
+              { icon: "🎮", label: "Game", href: "#games" },
+              { icon: "💻", label: "Proyek", href: "#projects" },
+              { icon: "✍️", label: "Artikel", href: "#articles" },
+              { icon: "🛠️", label: "Skills", href: "#skills" },
+            ].map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="rounded-lg border border-border p-4 flex items-center gap-3 hover:bg-accent transition-colors"
+              >
+                <span className="text-2xl">{link.icon}</span>
+                <span>{link.label}</span>
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Main Content Sections */}
         <div className="w-full space-y-8">
-          {/* Education */}
-          <section id="education" className="scroll-mt-16">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <span className="text-2xl">🎓</span>
-              Pendidikan
-            </h2>
-            <Accordion type="multiple" className="w-full">
-              {data.education.map((edu, idx) => (
-                <AccordionItem
-                  key={idx}
-                  value={`education-${idx}`}
-                  className="border-border"
-                >
-                  <AccordionTrigger className="hover:no-underline">
-                    <div className="flex flex-col items-start text-left">
-                      <span className="font-medium">{edu.institution}</span>
-                      <span className="text-sm text-muted-foreground">
-                        {edu.year} • {edu.major}
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-2">
-                    {edu.achievements && edu.achievements.length > 0 && (
-                      <>
-                        <h4 className="font-medium mb-2">Pencapaian:</h4>
-                        <ul className="list-disc ml-5 space-y-1 mb-4">
-                          {edu.achievements.map((a, i) => (
-                            <li key={i}>{a}</li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
-                    <h4 className="font-medium mb-2">Proyek:</h4>
-                    <ul className="list-disc ml-5 space-y-1">
-                      {edu.projects.map((proj, i) => (
-                        <li key={i}>{proj}</li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </section>
-
-          {/* Internships */}
-          <section id="internships" className="scroll-mt-16">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <span className="text-2xl">🏢</span>
-              Pengalaman Magang
-            </h2>
-            <Accordion type="multiple" className="w-full">
-              {data.internships.map((intern, idx) => (
-                <AccordionItem
-                  key={idx}
-                  value={`internship-${idx}`}
-                  className="border-border"
-                >
-                  <AccordionTrigger className="hover:no-underline">
-                    <div className="flex flex-col items-start text-left">
-                      <span className="font-medium">{intern.company}</span>
-                      <span className="text-sm text-muted-foreground">
-                        {intern.year} • {intern.role} ({intern.type})
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-2">
-                    <h4 className="font-medium mb-2">Tanggung Jawab:</h4>
-                    <ul className="list-disc ml-5 space-y-1">
-                      {intern.responsibilities.map((r, i) => (
-                        <li key={i}>{r}</li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </section>
-
           {/* Organizations */}
           <section id="organizations" className="scroll-mt-16">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <span className="text-2xl">🤝</span>
-              Organisasi
+              Organisasi & Komunitas
             </h2>
             <Accordion type="multiple" className="w-full">
               {data.organizations.map((org, idx) => (
@@ -425,6 +335,55 @@ export default function Home() {
                 </AccordionItem>
               ))}
             </Accordion>
+          </section>
+
+          {/* Skills */}
+          <section id="skills" className="scroll-mt-16">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <span className="text-2xl">🛠️</span>
+              Skills
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-card p-4 rounded-lg border border-border">
+                <h3 className="font-semibold mb-3">Hard Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {data.skills.hard_skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-sm px-3 py-1 bg-accent rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-card p-4 rounded-lg border border-border">
+                <h3 className="font-semibold mb-3">Software Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {data.skills.software_skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-sm px-3 py-1 bg-accent rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-card p-4 rounded-lg border border-border">
+                <h3 className="font-semibold mb-3">Soft Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {data.skills.soft_skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-sm px-3 py-1 bg-accent rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Projects */}
@@ -539,7 +498,7 @@ export default function Home() {
               height={24}
             />
             <span className="text-sm text-muted-foreground">
-              Portfolio Template
+              {"© 2025 Osi ic"}
             </span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
