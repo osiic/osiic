@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Kemi</h1>
-<h3 align="center">Bukan Siapa-Siapa!?</h3>
+<h3 align="center">hanya seorang yang penasaran</h3>
 
 <p align="center">
     <a href="https://dsc.gg/mabica">
@@ -13,13 +13,7 @@
     </a>
 </p>
 
----
-
-### 🏆 GitHub Stats
-
 <div align="center">
-  <a href="https://git.io/streak-stats">
-    <img src="https://streak-stats.demolab.com?user=osiic" alt="GitHub Streak" />
-  </a>
+<a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats-teal-iota.vercel.app?user=osiic&theme=buefy-dark" alt="GitHub Streak" /></a>
 </div>
 
