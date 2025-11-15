@@ -12,8 +12,3 @@
         <img src="https://img.shields.io/badge/Saweria-FF9800?style=for-the-badge&logo=kofi&logoColor=white" alt="Saweria Donate">
     </a>
 </p>
-
-<div align="center">
-<a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats-teal-iota.vercel.app?user=osiic&theme=buefy-dark" alt="GitHub Streak" /></a>
-</div>
-
