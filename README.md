@@ -48,34 +48,6 @@ turning low-level understanding + web dev + blockchain into one cohesive skillse
 
 ---
 
-## Selected Projects
-
-A few projects that represent what I do:
-
-- **Kumanime**  
-  A platform around anime/manga culture – playground for UI, UX, and content-heavy layouts.  
-  _[Demo link here]_ · _[Repo link here]_
-
-- **Mabica**  
-  An audiobook / creative platform I’m building to explore product design, content systems, and audio-focused UX.  
-  _[Demo]_ · _[Repo]_
-
-- **Re:Memories**  
-  A VTuber agency website, focused on visuals, storytelling, and multi-section layout for talents, streams, and auditions.  
-  _[Demo]_ · _[Repo]_
-
-- **TTC (Trans Training Center)**  
-  Company profile + digital system for a training center: information, programs, and potential integration with certificates and internal tools.  
-  _[Demo]_ · _[Repo]_
-
-- **InstinkStore**  
-  An e-commerce style project for exploring product listings, checkout flow, and basic store logic.  
-  _[Demo]_ · _[Repo]_
-
-> Replace the `_Demo_` and `_Repo_` placeholders with your actual URLs (Vercel, custom domain, GitHub repo, etc.).
-
----
-
 ## Currently
 
 Right now I’m:
