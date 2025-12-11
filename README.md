@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Osiic 👋</h1>
+<h1 align="center">Hi, I'm Osi ic 👋</h1>
 
 <p align="center">
   <b>Full Stack Web & Blockchain Developer</b><br/>
