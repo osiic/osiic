@@ -2,49 +2,52 @@
 
 <p align="center">
   <b>Full Stack Web & Blockchain Developer</b><br/>
-  I build web apps, smart contracts, and small products — and share the process online.
+  Saya membuat aplikasi web, smart contract, dan produk digital kecil — sambil bereksperimen dengan berbagai teknologi dan berbagi prosesnya secara online.
 </p>
 
 <p align="center">
   <a href="https://osiic.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-osiic.vercel.app-blue?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Portfolio-osiic.vercel.app-0A66C2?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
-  <a href="mailto:YOUR_EMAIL_HERE">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge" />
+  <a href="mailto:ridhomuzaki.ic@gmail.com">
+    <img src="https://img.shields.io/badge/Email-ridhomuzaki.ic%40gmail.com-0A66C2?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://wa.me/6282225413137">
+    <img src="https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
 
 ---
 
-## 🧩 What I Do
+## 🧩 Apa yang Saya Kerjakan
 
 - 🖥️ Full stack web development (frontend, backend, deployment)
-- 🧾 Smart contract development for Web3 use cases
-- 🐧 Experimenting with Linux, tooling, and system-level stuff
+- 🧾 Pengembangan smart contract untuk berbagai use case Web3
+- 🧪 Eksperimen teknologi: web, blockchain, Linux, DevOps, jaringan, robotika, elektronika/motor, automation, dan hal-hal sistem-level & hardware
 
-I'm aiming my career at **blockchain**, with **web development** as my core skill.
-
----
-
-## 🏗️ What I'm Building
-
-Most of my time goes into:
-
-- client / freelance work (when available)
-- personal projects & experiments
-- growing a small web dev agency called **Ngetikin**
-
-GitHub here is more like a **lab** than a portfolio: expect experiments, WIP code, and a few projects that actually ship.
+Saya memfokuskan karier ke **blockchain**, dengan **web development** sebagai fondasi utama.
 
 ---
 
-## 📬 Contact
+## 🏗️ Apa yang Sedang Saya Bangun
+
+Sebagian besar waktu saya habis untuk:
+
+- kerja klien / freelance (kalau ada)
+- proyek pribadi & eksperimen
+- mengembangkan web dev agency kecil bernama **Ngetikin**
+
+GitHub di sini lebih seperti **lab** daripada portofolio: isinya eksperimen, kode WIP, dan beberapa proyek yang benar-benar dirilis.
+
+---
+
+## 📬 Kontak
 
 - 🌐 **Portfolio:** https://osiic.vercel.app  
 - 📸 **Instagram:** [@ngodingbarenggua](https://instagram.com/ngodingbarenggua)  
-- 🎵 **TikTok:** [@YOUR_TIKTOK_HERE](https://tiktok.com/@ngodingbarenggua)  
-- 💼 **LinkedIn:** [YOUR_LINKEDIN_NAME](https://www.linkedin.com/in/m.muzaki)  
-- ✉️ **Email:** ridhomuzaki.ic@gmail.com
-- 💬 **WhatsApp:** +62XXXXXXXXXXX  
+- 🎵 **TikTok:** [@ngodingbarenggua](https://tiktok.com/@ngodingbarenggua)  
+- 💼 **LinkedIn:** [M. Ridho Haris Muzaki](https://www.linkedin.com/in/m.muzaki)  
+- ✉️ **Email:** [ridhomuzaki.ic@gmail.com](mailto:ridhomuzaki.ic@gmail.com)  
+- 💬 **WhatsApp:** [+62 822-2541-3137](https://wa.me/6282225413137)  
 
-_Open for freelance work & web/blockchain dev roles._
+_Terbuka untuk kerja freelance & role pengembangan web/blockchain._
